@@ -2,4 +2,31 @@
 npm install -g @angular/cli
 ng new primo-progetto
 y y CSS
+ng serve
+http://localhost:4200/
+
+//STRUTTURA
+nodu_modules: gestore dei pacchetti che abbiamo installato (npm)
+.browserlistrc: brower supportato
+.editorconfig: regole per l'editor
+.gitignore: file che vogliamo salvare o ignorare
+angular.json: impostanzioni angular
+karma.config.js: serve per i test
+package.json: contiene dettagli sul progetto 
+README.md: guida per l'utilizzo di angular
+tsconfig.app.json: configurazione di ts
+tsconfig.json: struttura dati che serve al compilatore
+tsconfig.spec.json: file legati al testing
+src:
+	-app: app.module.ts: lista di componenti, moduli e services
+	      app-routing.module.ts: cambia url in alto
+	-assets: file che vogliamo utilizzare come img
+	-enviroment: ambiante di svilippo, andremo a mettere delle variabili
+	-main.ts: da dove parte app angular, file iniziale
+
+
+
+
+
+
 
