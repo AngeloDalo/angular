@@ -1,0 +1,5 @@
+//INSTALLAZIONE
+npm install -g @angular/cli
+ng new primo-progetto
+y y CSS
+
