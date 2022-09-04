@@ -4,6 +4,7 @@ ng new primo-progetto
 y y CSS
 ng serve
 http://localhost:4200/
+pulire app.component.html
 
 //STRUTTURA
 nodu_modules: gestore dei pacchetti che abbiamo installato (npm)
@@ -24,6 +25,22 @@ src:
 	-enviroment: ambiante di svilippo, andremo a mettere delle variabili
 	-main.ts: da dove parte app angular, file iniziale
 
+//COMPONENTI
+ng g c prova 
+inserire <app-prova></app-prova> in app.component.html
+
+//ANGULAR MATERIAL DESIGN
+alternativa a bootstrap
+ng add @angular/material
+y Indigo-pink y   include ad enable anaimations
+in app.module.ts 
+//ESEMPIO SLIDER
+//api
+import { MatSliderModule } from '@angular/material/slider';
+in imports aggiungere MatSliderModule
+//examples
+andare in un componente <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+avviare di nuovo server
 
 
 
