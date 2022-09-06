@@ -53,8 +53,19 @@ ngAfterViewChecked: dopo che contenuto è stato controllato
 //STRING INTERPOLATION
 inserire variabili in componente.component.ts -> nomecane = "roger"
 inserirlo in componente.component.html -> <h1>{{nomecane}}</h1>
+-----------------
+cani = [
+    {nome: 'roger',
+    razza: 'golden',
+    descrizione: 'cane normale'}
+]
+{{ cani[0].nome.toUpperCase() }}
+{{ 6 > 5 ? cani[0].razza : 'no' }}
 //PROPERTY BINDING
 modificare classi e stili in base ai dati che arrivano dal ts
+isDisabled = true
+<button mat-raised-button color="primary" [disabled]="isDisabled">Primary</button>
+//esempio immagine
 //EVENT BINDING
 leghiamo eventi che avvengolo nel html e li inviamo al ts
 //TWO WAY BINDING
