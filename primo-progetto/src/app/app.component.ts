@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'primo-progetto';
+
+  //Se avessi messo e: any potevo evitare HTMLInputElement, ho fatto un casting
+  onInput(e: Event){
+    console.log((<HTMLInputElement>e.target).value);
+  }
 }

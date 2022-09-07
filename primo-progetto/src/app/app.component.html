@@ -1,1 +1,10 @@
 <app-prova></app-prova>
+
+<!--EVENT BINDING-->
+<!-- <button mat-raised-button color="primary" (click)="onClick(this)">Primary</button> -->
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Message</mat-label>
+    <input matInput #message maxlength="256" placeholder="Ex. I need help with..." (input)="onInput($event)">
+  </mat-form-field>
+</form>

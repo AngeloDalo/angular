@@ -68,6 +68,7 @@ isDisabled = true
 //esempio immagine
 //EVENT BINDING
 leghiamo eventi che avvengolo nel html e li inviamo al ts
+//app.component.ts e app.component.html
 //TWO WAY BINDING
 cambiare una variabile in tempo reale con ad esempio un form
 
