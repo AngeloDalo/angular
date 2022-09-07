@@ -65,7 +65,7 @@ cani = [
 modificare classi e stili in base ai dati che arrivano dal ts
 isDisabled = true
 <button mat-raised-button color="primary" [disabled]="isDisabled">Primary</button>
-//esempio immagine
+//esempio immagine, prova.component.ts/html
 //EVENT BINDING
 leghiamo eventi che avvengolo nel html e li inviamo al ts
 //app.component.ts e app.component.html
