@@ -71,6 +71,8 @@ leghiamo eventi che avvengolo nel html e li inviamo al ts
 //app.component.ts e app.component.html
 //TWO WAY BINDING
 cambiare una variabile in tempo reale con ad esempio un form
+eventi html cambiano ts
+<input matInput placeholder="Ex. Pizze" [(ngModel)]="title" />, già di default ha valore title
 
 
 
