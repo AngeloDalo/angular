@@ -11,9 +11,34 @@
 </form> -->
 
 <!--2 WAY BINDING-->
-<button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
+<!-- <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
 <mat-form-field class="example-full-width" apparence="fill">
   <mat-label>Label</mat-label>
   <input matInput placeholder="Ex. Pizze" [(ngModel)]="title" />
 </mat-form-field>
-<p>{{ title }}</p>
+<p>{{ title }}</p> -->
+
+<!--*NGIF-->
+<!-- <p *ngIf="6>5">sono un paragrafo</p> -->
+<!--IF ELSE BASICO-->
+<!-- <p *ngIf="isVisible">è visibile</p>
+<p *ngIf="!isVisible">non è visibile</p> -->
+<!--IF ELSE COMPLICATO-->
+<!--con else devo mettere ng-template-->
+<!-- <p *ngIf="isVisible; else bloccoElse">sono visibile</p>
+<ng-template #bloccoElse><p>non sono visibile</p></ng-template> -->
+<!--IF ELSE CON THEN-->
+<!-- <ng-template *ngIf="isVisible; then bloccoIf else bloccoElse2"></ng-template>
+<ng-template #bloccoIf><p>sono visibile</p></ng-template>
+<ng-template #bloccoElse2><p>non sono visibile</p></ng-template> -->
+
+<!--*NGFOR-->
+<!-- <ul>
+  <li *ngFor="let persona of persone; index as i">
+    <p *ngIf="i < 0">ciao</p>
+    {{ i+1 }}) {{persona.nome}} - {{persona.cognome}}
+    <div class="cerchio" *ngIf="persona.isOnline"></div>
+    <div class="cerchio-offline" *ngIf="!persona.isOnline"></div>
+  </li>
+</ul> -->
+

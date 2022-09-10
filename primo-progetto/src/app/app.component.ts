@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prova-angular';
+  isVisible = true;
+  persone = [
+    {nome: "luca", cognome: "rossi", isOnline: true},
+    {nome: "anna", cognome: "neri", isOnline: true},
+    {nome: "marco", cognome: "verde", isOnline: false},
+  ]
 
   //Se avessi messo e: any potevo evitare HTMLInputElement, ho fatto un casting
   onInput(e: Event){

@@ -7,3 +7,15 @@
 .example-full-width {
   width: 100%;
 }
+
+.cerchio {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+}
+
+.cerchio-offline {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}

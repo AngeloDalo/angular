@@ -5,7 +5,7 @@ y y CSS
 ng serve
 http://localhost:4200/
 pulire app.component.html
-
+----------------------------------------------------------------
 //STRUTTURA
 nodu_modules: gestore dei pacchetti che abbiamo installato (npm)
 .browserlistrc: brower supportato
@@ -24,11 +24,11 @@ src:
 	-assets: file che vogliamo utilizzare come img
 	-enviroment: ambiante di svilippo, andremo a mettere delle variabili
 	-main.ts: da dove parte app angular, file iniziale
-
+----------------------------------------------------------------
 //COMPONENTI
 ng g c prova 
 inserire <app-prova></app-prova> in app.component.html
-
+----------------------------------------------------------------
 //ANGULAR MATERIAL DESIGN
 alternativa a bootstrap
 ng add @angular/material
@@ -41,38 +41,43 @@ in imports aggiungere MatSliderModule
 //examples
 andare in un componente <mat-slider min="1" max="100" step="1" value="50"></mat-slider>, aggiungere css
 avviare di nuovo server
-
+----------------------------------------------------------------
 //TUTTI TIèI DI INTERFACCIA
 export class ProvaComponent implements OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnDestroy {
------------------------------------------------------
 NgDoCheck: se abbiamo delle regole non check le andrà a rispettare
 ngAfterContentInit: dopo che contenuto viene inizializzato
 ngAfterViewChecked: dopo che contenuto è stato controllato
-
+----------------------------------------------------------------
 //DATA BINDING
 //STRING INTERPOLATION
 inserire variabili in componente.component.ts -> nomecane = "roger"
 inserirlo in componente.component.html -> <h1>{{nomecane}}</h1>
------------------
-cani = [
-    {nome: 'roger',
-    razza: 'golden',
-    descrizione: 'cane normale'}
-]
-{{ cani[0].nome.toUpperCase() }}
-{{ 6 > 5 ? cani[0].razza : 'no' }}
+-->esempio app.component.html/ts<--
 //PROPERTY BINDING
 modificare classi e stili in base ai dati che arrivano dal ts
 isDisabled = true
 <button mat-raised-button color="primary" [disabled]="isDisabled">Primary</button>
-//esempio immagine, prova.component.ts/html
+-->esempio immagine, prova.component.ts/html<--
 //EVENT BINDING
 leghiamo eventi che avvengolo nel html e li inviamo al ts
-//app.component.ts e app.component.html
+-->app.component.ts e app.component.html<--
 //TWO WAY BINDING
+-->app.component.html/ts<--
 cambiare una variabile in tempo reale con ad esempio un form
 eventi html cambiano ts
 <input matInput placeholder="Ex. Pizze" [(ngModel)]="title" />, già di default ha valore title
+----------------------------------------------------------------
+//DIRETTIVE
+cambiare comportamento elemento
+-built-in (ngClass, ngStyle, ngModel)
+-attribute (comportamento o apperenza di elemento)
+-structural (*ngIf, *ngFor)
+//*NGIF
+<p *ngIf="6>5">sono un paragrafo</p>
+-->esempio app.component.html/tes<--
+//*NGFOR
+<li *ngFor="let persona of persone; index as i">
+-->app.component.html/ts<--
 
 
 
