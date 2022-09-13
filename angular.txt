@@ -79,11 +79,31 @@ cambiare comportamento elemento
 <li *ngFor="let persona of persone; index as i">
 -->app.component.html/ts<--
 //*NGSWITCH
+numero = 3;
+<div [ngSwitch]="numero">
+  <p *ngSwitchCase="1">uno</p>
+  <p *ngSwitchCase="'stringa'">4</p>
+  <p *ngSwitchDefault>default</p>
+</div>
 -->app.component.html/ts<--
-
-
-
-
+//*NGSTYLE -> modifico css
+color = 'green';
+<ul>
+  <li *ngFor="let persona of persone">
+    <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? color : 'red'}"></div>
+    <p>{{persona.nome}} - {{persona.cognome}}</p>
+  </li>
+</ul>
+-->app.component.html/ts<--
+//*NGCLASS -> aggiungo classi
+<ul>
+  <li *ngFor="let persona of persone; index as i">
+    <div class="cerchio" [ngClass]="{'cerchio-online prova': persona.isOnline, 'cerchio-offline': !persona.isOnline}">i</div>
+    <div class="cerchio" [ngClass]="persona.isOnline ? 'cerchio-online' : 'cerchio-offline'">i</div>
+    <p>{{persona.nome}} - {{persona.cognome}}</p>
+  </li>
+</ul>
+-->app.component.html/ts<--
 
 
 

@@ -11,11 +11,37 @@
 .cerchio {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
+  background-color: blue;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.cerchio-online {
   background-color: green;
+  color: white;
 }
 
 .cerchio-offline {
+  background-color: red;
+  color: yellow;
+}
+
+.prova {
+  border-radius: 30%;
+}
+/* .cerchio-offline {
   width: 30px;
   height: 30px;
   background-color: red;
+} */
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+li > p {
+  margin-bottom: 0;
 }

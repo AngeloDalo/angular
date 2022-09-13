@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'prova-angular';
   isVisible = true;
   numero = 3;
+  color = 'green';
   persone = [
     {nome: "luca", cognome: "rossi", isOnline: true},
     {nome: "anna", cognome: "neri", isOnline: true},
