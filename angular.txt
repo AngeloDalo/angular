@@ -78,6 +78,8 @@ cambiare comportamento elemento
 //*NGFOR
 <li *ngFor="let persona of persone; index as i">
 -->app.component.html/ts<--
+//*NGSWITCH
+-->app.component.html/ts<--
 
 
 

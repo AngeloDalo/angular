@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'prova-angular';
   isVisible = true;
+  numero = 3;
   persone = [
     {nome: "luca", cognome: "rossi", isOnline: true},
     {nome: "anna", cognome: "neri", isOnline: true},
