@@ -24,4 +24,18 @@ export class AppComponent {
   onClick(e: Event){
     this.title = "ho cliccato sul bottone";
   }
+
+  //PARENT TO CHILD
+  onClick2(){
+    this.persone = [
+      {nome: "1", cognome: "rossi", isOnline: true},
+      {nome: "2", cognome: "neri", isOnline: true},
+      {nome: "3", cognome: "verde", isOnline: false},
+    ]
+  }
+
+  //CHILD TO PARENT
+  onRiceviDati(value: string) {
+    console.log(value)
+  }
 }

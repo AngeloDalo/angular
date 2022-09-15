@@ -51,7 +51,7 @@
   <p *ngSwitchDefault>default</p>
 </div> -->
 
-<!--*NGCLASS-->
+<!--*NGSTYLE-->
 <!-- <ul>
   <li *ngFor="let persona of persone">
     <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? color : 'red'}"></div>
@@ -67,3 +67,10 @@
     <p>{{persona.nome}} - {{persona.cognome}}</p>
   </li>
 </ul> -->
+
+<!--PARENT TO CHILD-->
+<!-- <app-prova [data]="persone"></app-prova>
+<button (click)="onClick2()">cambia</button> -->
+
+<!--CHILD TO PARENT-->
+<!-- <app-prova (mandaDatiEvento)="onRiceviDati($event)"></app-prova> -->

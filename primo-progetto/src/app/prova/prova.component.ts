@@ -1,11 +1,11 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css']
 })
-export class ProvaComponent implements OnInit {
+export class ProvaComponent implements OnInit, OnChanges {
 //export class ProvaComponent implements OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnDestroy {
   //STRING INTERPOLATION
   nomecane = "roger"
@@ -21,9 +21,24 @@ export class ProvaComponent implements OnInit {
   immagine1 = 'https://assets2.razerzone.com/images/pnx.assets/618c0b65424070a1017a7168ea1b6337/razer-wallpapers-page-hero-mobile.jpg'
   immagine2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
 
+  //CHILD TO PARENT
+  @Output() mandaDatiEvento = new EventEmitter<string>()
+  nome = 'Luca'
+  mandaDati() {
+    this.mandaDatiEvento.emit(this.nome)
+  }
+
   constructor() {
     console.log("costruttore")
   }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    //PARENT TO CHILD
+    console.log(this.data)
+  }
+
+  //PARENT TO CHILD
+  @Input() data: any;
 
   ngOnInit(): void {
     //PROPERTY BINDING
@@ -40,23 +55,8 @@ export class ProvaComponent implements OnInit {
       }
       counter++
     }, 2000)
+    //PARENT TO CHILD
+    console.log(this.data)
   }
-  // ngAfterContentChecked(): void {
-  //   console.log("ngAfterContentChecked")
-  // }
-  // ngAfterContentInit(): void {
-  //   console.log("ngAfterContentInit")
-  // }
-  // ngAfterViewChecked(): void {
-  //   console.log("ngAfterViewChecked")
-  // }
-  // ngAfterViewInit(): void {
-  //   console.log("ngAfterViewInit")
-  // }
-  // ngDoCheck(): void {
-  //   console.log("ngDoCheck")
-  // }
-  // ngOnDestroy(): void {
-  //   console.log("ngOnDestroy")
-  // }
+
 }

@@ -104,6 +104,32 @@ color = 'green';
   </li>
 </ul>
 -->app.component.html/ts<--
+----------------------------------------------------------------
+//PARENTE TO CHILD
+nel componente prova.component.ts inserisco @Input() data: any; //dato nome variabile
+in app.componet.html inserisco <app-prova [data]="persone"></app-prova> //persone presente in ts
+in prova.component.html posso utilizzare persone (data)
+<div *ngFor="let persona of data;">
+  <p>{{persona.nome}} - {{persona.cognome}}</p>
+</div>
+//modifica con bottone in app.component.html/ts e uso di OnChanges in prova.component.ts
+//CHILD TO PARENT
+inserisco variabile in figlio prova.component.html
+creo evento output in prova.component.ts @Output() mandaDatiEvento = new EventEmitter<string>()
+creo bottone con funzione in prova.component.html <button (click)="mandaDati()">Manda dati al parente</button>
+creo funzione in prova.component.ts
+mandaDati() {
+    this.mandaDatiEvento.emit(this.nome)
+}
+il componente padre deve essere in attasa dell'evento e vado in app.component.html
+<app-prova (mandaDatiEvento)="onRiceviDati($event)"></app-prova>
+in app.component.ts creo la funzione onRiceviDati()
+onRiceviDati(value: string) {
+    console.log(value)
+}
+
+
+
 
 
 
