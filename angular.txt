@@ -127,6 +127,44 @@ in app.component.ts creo la funzione onRiceviDati()
 onRiceviDati(value: string) {
     console.log(value)
 }
+----------------------------------------------------------------
+//VARIABILI TEMPLATE
+passare parametro da html a ts
+//html
+<input #inputSaluti value="ciao">
+//ts
+@ViewChild('inputSaluti') valoreInput!: ElementRef<HTMLInputElement>
+ngAfterViewInit(): void {
+    console.log(this.valoreInput.nativeElement.value)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
