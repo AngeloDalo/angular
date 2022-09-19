@@ -54,4 +54,9 @@ export class AppComponent implements AfterViewInit {
   cambiaColore(colore: string) {
     this.colore = colore
   }
+
+  //FUNZIONI PIPE
+  titolo = "corso angulare"
+  oggi = Date.now()
+  number = 5
 }

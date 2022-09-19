@@ -161,6 +161,20 @@ vado in app.component.ts
 colore = ''
 vado in app.component.html
 <p [appHighlight]="colore" defaultColor="blue">ciao sono un paragrafo</p>
+----------------------------------------------------------------
+//FUNZIONI PIPE
+<p>ciao benvenuti al {{titolo | uppercase}}</p>
+-->oggi = date.Now()
+<p>{{oggi | date}}</p>
+<p>{{oggi | date:'medium'}}</p> //data con ora
+<p>{{oggi | date:'shortTime'}}</p> //solo ora
+<p>{{oggi | date:'mm:ss'}}</p>
+-->number = 5
+<p>{{number | number: '2.1-4'}}</p> //numero prima e dopo virgola
+<p>{{number | percent: '2.1-4'}}</p>
+<p>{{number | currency}}</p>
+<p>{{number | currency:'EUR'}}</p>
+
 
 
 
