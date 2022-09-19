@@ -48,4 +48,10 @@ export class AppComponent implements AfterViewInit {
   onRiceviDati(value: string) {
     console.log(value)
   }
+
+  //CREARE DIRETTIVE
+  colore = ''
+  cambiaColore(colore: string) {
+    this.colore = colore
+  }
 }

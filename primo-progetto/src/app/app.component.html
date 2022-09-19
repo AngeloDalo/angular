@@ -76,5 +76,14 @@
 <!-- <app-prova (mandaDatiEvento)="onRiceviDati($event)"></app-prova> -->
 
 <!--VARIABILE TEMPLATE-->
-<input #inputSaluti value="ciao">
-<button (click)="onClick3()">invia</button>
+<!-- <input #inputSaluti value="ciao">
+<button (click)="onClick3()">invia</button> -->
+
+<!--DIRETTIVE-->
+<h2>scegli colore</h2>
+<div>
+  <input type="radio" name="coloreEvid" (click)="cambiaColore('red')"> Rosso
+  <input type="radio" name="coloreEvid" (click)="cambiaColore('pink')"> Rosa
+  <input type="radio" name="coloreEvid" (click)="cambiaColore('purple')"> Viola
+</div>
+<p [appHighlight]="colore" defaultColor="blue">ciao sono un paragrafo</p>

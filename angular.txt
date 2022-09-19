@@ -137,10 +137,30 @@ passare parametro da html a ts
 ngAfterViewInit(): void {
     console.log(this.valoreInput.nativeElement.value)
 }
-
-
-
-
+----------------------------------------------------------------
+//CREARE DIRETTIVE
+ng g d highlight
+creimo direttiva in hightlight.directive.ts modificando il costruttore
+constructor(private element: ElementRef) {
+    this.element.nativeElement.style.backgroundColor = 'yellow'
+}
+ora dobbiamo applicare la nostra direttiva in app.component.html
+<p appHighlight>ciao sono un paragrafo</p>
+//vedere altri esempi
+//PASSARE DATI ALLA DIRETTIVA
+vado in app.component.html
+<p [appHighlight]="colore">ciao sono un paragrafo</p>
+vado in app.component.ts
+colore = "purple"
+vado in highlight.directive.ts
+@Input() appHighlight = ''
+//AGGIUNGERE VALORE DI DEFAULT 
+vado in highlights.directive.ts 
+@Input() defaultColor = ''
+vado in app.component.ts
+colore = ''
+vado in app.component.html
+<p [appHighlight]="colore" defaultColor="blue">ciao sono un paragrafo</p>
 
 
 
