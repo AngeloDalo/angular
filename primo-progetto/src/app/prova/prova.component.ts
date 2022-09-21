@@ -1,4 +1,5 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
+import { ServizioProvaService } from '../servizi/servizio-prova.service';
 
 @Component({
   selector: 'app-prova',
@@ -28,8 +29,8 @@ export class ProvaComponent implements OnInit, OnChanges {
     this.mandaDatiEvento.emit(this.nome)
   }
 
-  constructor() {
-    console.log("costruttore")
+  //SERVICE
+  constructor(private servizioProva: ServizioProvaService) {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -57,6 +58,8 @@ export class ProvaComponent implements OnInit, OnChanges {
     }, 2000)
     //PARENT TO CHILD
     console.log(this.data)
+    //SERVICE
+    console.log(this.servizioProva.persone)
   }
 
 }

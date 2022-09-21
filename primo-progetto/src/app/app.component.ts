@@ -1,20 +1,21 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ServizioProvaService } from './servizi/servizio-prova.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   title = 'prova-angular';
   isVisible = true;
   numero = 3;
   color = 'green';
-  persone = [
-    {nome: "luca", cognome: "rossi", isOnline: true},
-    {nome: "anna", cognome: "neri", isOnline: true},
-    {nome: "marco", cognome: "verde", isOnline: false},
-  ]
+  // persone = [
+  //   {nome: "luca", cognome: "rossi", isOnline: true},
+  //   {nome: "anna", cognome: "neri", isOnline: true},
+  //   {nome: "marco", cognome: "verde", isOnline: false},
+  // ]
 
   //VARIABILE TEMPLATE
   //inputSaluti si chiama valoreInput
@@ -37,11 +38,11 @@ export class AppComponent implements AfterViewInit {
 
   //PARENT TO CHILD
   onClick2(){
-    this.persone = [
-      {nome: "1", cognome: "rossi", isOnline: true},
-      {nome: "2", cognome: "neri", isOnline: true},
-      {nome: "3", cognome: "verde", isOnline: false},
-    ]
+    // this.persone = [
+    //   {nome: "1", cognome: "rossi", isOnline: true},
+    //   {nome: "2", cognome: "neri", isOnline: true},
+    //   {nome: "3", cognome: "verde", isOnline: false},
+    // ]
   }
 
   //CHILD TO PARENT
@@ -59,4 +60,11 @@ export class AppComponent implements AfterViewInit {
   titolo = "corso angulare"
   oggi = Date.now()
   number = 5
+
+  //SERVICE
+  constructor(private servizioProva: ServizioProvaService) {
+  }
+  ngOnInit(): void {
+    console.log('appcomponent', this.servizioProva.persone)
+  }
 }

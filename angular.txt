@@ -174,11 +174,27 @@ vado in app.component.html
 <p>{{number | percent: '2.1-4'}}</p>
 <p>{{number | currency}}</p>
 <p>{{number | currency:'EUR'}}</p>
-
-
-
-
-
+----------------------------------------------------------------
+//SERVICE
+permettono qualsiasi tipo di comunicazione
+ng g s servizio-prova
+inserisco variabile che voglio utilizzare ovunque in servizio.service.ts
+definisco il servizio nel costructor del componente
+constructor(private servizioProva: ServizioProvaService) {}
+vedo variabile nel ngOnInit del componente
+ngOnInit(): void {
+    console.log(this.servizioProva.persone)
+}
+----------------------------------------------------------------
+//ROUTING
+creo componenti di prova per provare routing
+definisco <router-outlet></router-outlet> in app.component.ts
+gestisco il routing in app-routing.module.ts
+const routes: Routes = [
+  {path: '', component: HomeComponent },
+  {path: 'about', component: AboutComponent },
+  {path: 'contact', component: ContactComponent },
+];
 
 
 
