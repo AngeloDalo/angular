@@ -11,5 +11,12 @@ export class ServizioProvaService {
     {nome: "marco", cognome: "verde", isOnline: false},
   ]
 
+  getPersone() {
+    return this.persone
+  }
+  gerPersona(index: number){
+    return this.persone[index]
+  }
+
   constructor() { }
 }

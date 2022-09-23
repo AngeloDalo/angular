@@ -195,10 +195,27 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent },
   {path: 'contact', component: ContactComponent },
 ];
-
-
-
-
+//ROUTING CON PARAMETRI
+vado in app-routing.module.ts per aggiungere percorso aggiuntivo
+{path: 'contact/:id', component: ContactComponent },
+nel costruttore del componente devo importare la route
+private route: ActivatedRoute
+creo variabile per vedere se sono in una route composta contact/:id
+isProfile: boolean = false;
+in ngOnInit cambio valore in true se sono in route composta
+ngOnInit(): void {
+    // this.persone=this.servizioProva.getPersone()
+    // this.isProfile = !this.route.snapshot.paramMap.get('id') ? false : true
+    if(this.route.snapshot.paramMap.get('id')){
+      this.isProfile = true
+      this.persone = this.servizioProva.gerPersona(parseInt(this.route.snapshot.paramMap.get('id')!))
+    } else {
+      this.isProfile = false
+      this.persone=this.servizioProva.getPersone()
+    }
+    console.log(this.isProfile)
+  }
+creo nel contact.component.html la situazioni in cui voglio tutti i contatti oppure il singolo contatto con in ng-tamplate if else
 
 
 
