@@ -9,21 +9,22 @@ import { ServizioProvaService } from 'src/app/servizi/servizio-prova.service';
 })
 export class ContactComponent implements OnInit {
   persone: any
-  persona: any
+  // persona: any
   isProfile: boolean = false;
   constructor(private servizioProva: ServizioProvaService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // this.persone=this.servizioProva.getPersone()
-    // this.isProfile = !this.route.snapshot.paramMap.get('id') ? false : true
-    if(this.route.snapshot.paramMap.get('id')){
-      this.isProfile = true
-      this.persona = this.servizioProva.gerPersona(parseInt(this.route.snapshot.paramMap.get('id')!))
-    } else {
-      this.isProfile = false
-      this.persone=this.servizioProva.getPersone()
-    }
-    console.log(this.isProfile)
+    //ROUTING CON PARAMETRI
+    // if(this.route.snapshot.paramMap.get('id')){
+    //   this.isProfile = true
+    //   this.persona = this.servizioProva.gerPersona(parseInt(this.route.snapshot.paramMap.get('id')!))
+    // } else {
+    //   this.isProfile = false
+    //   this.persone=this.servizioProva.getPersone()
+    // }
+    // console.log(this.isProfile)
+    //ROUTING CHILDREN PER CARICARE SOTOCOMPONENTI
+    this.persone = this.servizioProva.getPersone()
   }
 
 }

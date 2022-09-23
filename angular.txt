@@ -216,8 +216,16 @@ ngOnInit(): void {
     console.log(this.isProfile)
   }
 creo nel contact.component.html la situazioni in cui voglio tutti i contatti oppure il singolo contatto con in ng-tamplate if else
-
-
+//ROUTING CHILDREN PER CARICARE SOTOCOMPONENTI
+non esco dalla pagina ma faccio uscire risultati in una banda laterale
+creo un componente contatto
+in app-routing.module.ts togliamo {path: 'contact/:id', component: ContactComponent }, perchè se vogliamo avere tutto su una stessa pagina dobbiamo aggiungere una proprietà chimata children
+{path: 'contact', component: ContactComponent, children: [
+  {path: ':id', component: ContattoComponent}
+]},
+creo collegamento da contact a contatto 
+<router-outlet></router-outlet>
+modifico ngOnInit di contact e contatto facendo in modo che si aggiorni ogni volta che cambiamo link inserendo varibaile id
 
 
 

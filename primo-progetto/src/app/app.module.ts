@@ -16,6 +16,7 @@ import { HighlightDirective } from './direttive/highlight.directive';
 import { AboutComponent } from './componenti/about/about.component';
 import { ContactComponent } from './componenti/contact/contact.component';
 import { HomeComponent } from './componenti/home/home.component';
+import { ContattoComponent } from './componenti/contatto/contatto.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeComponent } from './componenti/home/home.component';
     HighlightDirective,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    ContattoComponent
   ],
   imports: [
     BrowserModule,

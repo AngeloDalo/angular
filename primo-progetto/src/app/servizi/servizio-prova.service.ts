@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ServizioProvaService {
+  // getPersona(arg0: number): any {
+  //   throw new Error('Method not implemented.');
+  // }
 
   persone = [
     {nome: "luca", cognome: "rossi", isOnline: true},
@@ -14,7 +17,7 @@ export class ServizioProvaService {
   getPersone() {
     return this.persone
   }
-  gerPersona(index: number){
+  getPersona(index: number){
     return this.persone[index]
   }
 
