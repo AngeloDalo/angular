@@ -231,8 +231,17 @@ modifico ngOnInit di contact e contatto facendo in modo che si aggiorni ogni vol
 creo componente per per l'errore
 cro una rotta per l'errore in app-routing.module.ts
 {path: '404', component: NotfoundComponent}
-
-
+//PROTEGGERE ROTTE CON GUARD
+creiamo servizio nella cartella auth ng g s auth/auth
+creiamo la guard in auth ng g guard auth/auth
+importiamo il service auth nel guard auth
+ritorniamo in canActivate la funzione isAuthenticate() di auth.service.ts collegato alla variabile isLoggedIn di auth.service.ts
+aggiungiamo il canActivate nella rotta che vogliamo proteggere in app-routing.module.ts
+possiamo accedere alla rotta solamente se isLoggedIn è true
+//VEDERE CHILD SOLAMENTE CON RUOLO AGGIUNTIVO
+aggiungiamo il CanActivateChild in auth.guard.ts
+aggingiamo una funzione isAdmin in auth.service.ts
+aggiungiamo canActivateChild in app-routing.module.ts
 
 
 
