@@ -226,6 +226,11 @@ in app-routing.module.ts togliamo {path: 'contact/:id', component: ContactCompon
 creo collegamento da contact a contatto 
 <router-outlet></router-outlet>
 modifico ngOnInit di contact e contatto facendo in modo che si aggiorni ogni volta che cambiamo link inserendo varibaile id
+----------------------------------------------------------------
+//REDIRECT AND ERROR
+creo componente per per l'errore
+cro una rotta per l'errore in app-routing.module.ts
+{path: '404', component: NotfoundComponent}
 
 
 
