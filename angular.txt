@@ -239,12 +239,24 @@ ritorniamo in canActivate la funzione isAuthenticate() di auth.service.ts colleg
 aggiungiamo il canActivate nella rotta che vogliamo proteggere in app-routing.module.ts
 possiamo accedere alla rotta solamente se isLoggedIn è true
 //VEDERE CHILD SOLAMENTE CON RUOLO AGGIUNTIVO
+child sono le informazioni dei contatti
 aggiungiamo il CanActivateChild in auth.guard.ts
 aggingiamo una funzione isAdmin in auth.service.ts
 aggiungiamo canActivateChild in app-routing.module.ts
-
-
-
+----------------------------------------------------------------
+//TEMPLATE DRIVEN FORM
+andare su angular material, form field, select e copiare api
+incollare in app.module.ts
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+aggiungere dati in imports
+MatFormFieldModule,
+MatSelectModule
+inseriamo tamplate form e inseriamo bottone
+aggiungiamo informazioni nel form
+<form #homeform="ngForm" (ngSubmit)="onSubmit(homeform)">
+creare funzione onSubmit
+vedere font e css
 
 
 
