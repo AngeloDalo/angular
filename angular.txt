@@ -257,6 +257,18 @@ aggiungiamo informazioni nel form
 <form #homeform="ngForm" (ngSubmit)="onSubmit(homeform)">
 creare funzione onSubmit
 vedere font e css
+//REACTIVE FORM
+form gestiti nel ts e non nel html
+aggiungere ReactiveFormsModule in app.module.ts
+aggiungere controlli in ngOnInit()
+aggiungo informazioni html e creo funzione onSubmit
+aggiungere validazione in ngOnInir()
+bloccare bottone se form non è valido, aggiungere disabled in html
+aggiungere un p per segnalare errore all'utente
+----------------------------------------------------------------
+
+
+
 
 
 
